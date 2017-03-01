@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-7C-e5P">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <progressView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NkH-Xa-0Da">
+                                <rect key="frame" x="0.0" y="20" width="375" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shake device!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukb-8L-uSo">
+                                <rect key="frame" x="87" y="285" width="200" height="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FYd-7C-e5P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6qB-GX-ho9"/>
+                            <constraint firstItem="ukb-8L-uSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QT3-DR-hBe"/>
+                            <constraint firstItem="ukb-8L-uSo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SYk-1u-IcE"/>
+                            <constraint firstAttribute="trailing" secondItem="FYd-7C-e5P" secondAttribute="trailing" id="V5A-Rw-Q6K"/>
+                            <constraint firstItem="NkH-Xa-0Da" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bgG-Rn-B0c"/>
+                            <constraint firstItem="FYd-7C-e5P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ev9-HL-FNa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FYd-7C-e5P" secondAttribute="bottom" id="jZA-YN-2g6"/>
+                            <constraint firstItem="NkH-Xa-0Da" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mEB-Ye-Fxh"/>
+                            <constraint firstAttribute="trailing" secondItem="NkH-Xa-0Da" secondAttribute="trailing" id="nA6-or-SKh"/>
+                            <constraint firstAttribute="trailing" secondItem="FYd-7C-e5P" secondAttribute="trailing" id="oDK-xA-Zcj"/>
+                            <constraint firstItem="FYd-7C-e5P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zMi-lr-rlf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myProgressView" destination="NkH-Xa-0Da" id="xr6-yb-Vi3"/>
+                        <outlet property="shakeLabel" destination="ukb-8L-uSo" id="u6C-Ae-1WC"/>
+                        <outlet property="webView" destination="FYd-7C-e5P" id="swQ-4p-5Gd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
