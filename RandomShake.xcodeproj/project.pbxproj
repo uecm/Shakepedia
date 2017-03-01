@@ -15,6 +15,7 @@
 		7489E5501E54488600E36DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7489E54F1E54488600E36DE2 /* Assets.xcassets */; };
 		74FF62D01E67516900CFB99E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74FF62CE1E67516900CFB99E /* LaunchScreen.storyboard */; };
 		74FF62D21E6751A700CFB99E /* wikiLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FF62D11E6751A700CFB99E /* wikiLogo.png */; };
+		74FF62D51E677CB500CFB99E /* WebPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FF62D41E677CB500CFB99E /* WebPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		7489E5541E54488600E36DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74FF62CF1E67516900CFB99E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74FF62D11E6751A700CFB99E /* wikiLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wikiLogo.png; sourceTree = "<group>"; };
+		74FF62D31E677CB500CFB99E /* WebPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPage.h; sourceTree = "<group>"; };
+		74FF62D41E677CB500CFB99E /* WebPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				7489E54C1E54488600E36DE2 /* RandomShake.xcdatamodeld */,
 				74FF62D11E6751A700CFB99E /* wikiLogo.png */,
 				7489E5401E54488600E36DE2 /* Supporting Files */,
+				74FF62D31E677CB500CFB99E /* WebPage.h */,
+				74FF62D41E677CB500CFB99E /* WebPage.m */,
 			);
 			path = RandomShake;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74FF62D51E677CB500CFB99E /* WebPage.m in Sources */,
 				7489E5481E54488600E36DE2 /* ViewController.m in Sources */,
 				7489E54E1E54488600E36DE2 /* RandomShake.xcdatamodeld in Sources */,
 				7489E5451E54488600E36DE2 /* AppDelegate.m in Sources */,
