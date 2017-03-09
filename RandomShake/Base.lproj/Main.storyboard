@@ -34,14 +34,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWU-Yf-y2E">
-                                <rect key="frame" x="164" y="373" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIL-be-qT5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -59,8 +51,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myProgressView" destination="NkH-Xa-0Da" id="xr6-yb-Vi3"/>
-                        <outlet property="shakeLabel" destination="ukb-8L-uSo" id="u6C-Ae-1WC"/>
+                        <outlet property="progressView" destination="NkH-Xa-0Da" id="bZX-q3-I8U"/>
+                        <outlet property="shakeLabel" destination="ukb-8L-uSo" id="jBk-50-uWi"/>
                         <outlet property="webView" destination="FYd-7C-e5P" id="swQ-4p-5Gd"/>
                     </connections>
                 </viewController>

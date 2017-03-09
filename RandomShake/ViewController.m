@@ -22,8 +22,8 @@
     int index;
     NSMutableArray<WebPage*> *webPages;
     
-    IBOutlet UIProgressView* myProgressView;
-    NSTimer *myTimer;
+    IBOutlet UIProgressView* progressView;
+    NSTimer *progressTimer;
     __weak IBOutlet UILabel *shakeLabel;
     
     UIView *maskView;
@@ -40,7 +40,7 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-    [myProgressView setProgress:0.0f];
+    [progressView setProgress:0.0f];
     [_webView setDelegate:self];
     
     // Index of current page in Web Pages array
@@ -58,14 +58,6 @@
     [rightPanGestureRecognizer setEdges:UIRectEdgeRight];
     [self.view addGestureRecognizer:rightPanGestureRecognizer];
     
-}
-
-- (IBAction)buttonPressed:(id)sender {
-    if ([_webView isLoading]) {
-        return;
-    }
-    [_webView setHidden:false];
-    [_webView loadRequest:[self randomWikipediaPageRequest]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -215,11 +207,11 @@
     if (shakeLabel) {
         [shakeLabel removeFromSuperview];
     }
-    [myProgressView setHidden:false];
-    [myProgressView setProgress:0];
+    [progressView setHidden:false];
+    [progressView setProgress:0];
     loaded = false;
     //0.01667 is roughly 1/60, so it will update at 60 FPS
-    myTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
+    progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.01667 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
     
     
 }
@@ -258,18 +250,18 @@
 
 -(void)timerCallback {
     if (loaded) {
-        if (myProgressView.progress >= 1) {
-            myProgressView.hidden = true;
-            [myTimer invalidate];
+        if (progressView.progress >= 1) {
+            progressView.hidden = true;
+            [progressTimer invalidate];
         }
         else {
-            myProgressView.progress += 0.1;
+            progressView.progress += 0.1;
         }
     }
     else {
-        myProgressView.progress += 0.005;
-        if (myProgressView.progress >= 0.90) {
-            myProgressView.progress = 0.90;
+        progressView.progress += 0.005;
+        if (progressView.progress >= 0.90) {
+            progressView.progress = 0.90;
         }
     }
 }
