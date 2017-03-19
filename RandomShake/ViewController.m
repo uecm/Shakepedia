@@ -256,6 +256,10 @@
     NSString *selectedLanguage = [languages objectAtIndex:[languagePicker selectedRowInComponent:0]];
     prefix = [langPrefixes objectAtIndex:[languagePicker selectedRowInComponent:0]];
     [languageButton setTitle:selectedLanguage forState:UIControlStateNormal];
+    
+    //Save cnahges to settings.bundle
+    NSString *value = [NSString stringWithFormat:@"%d",[languagePicker selectedRowInComponent:0]];
+    [[NSUserDefaults standardUserDefaults] setValue:value forKey:@"user_language"];
 }
 
 
