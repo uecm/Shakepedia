@@ -37,13 +37,23 @@
 
 @implementation ViewController
 
+
+
 #pragma mark - View setup
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+   
     // Do any additional setup after loading the view, typically from a nib.
     [progressView setProgress:0.0f];
     [_webView setDelegate:self];
+    
+    // Get all Wikipedia supported languages, stored in file 'Languages'
+    [self parseLanguagesFromFile];
+
+    // Retrieve user-selected language and set prefix variable accordingly
+    NSString *userLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_language"];
+    prefix = [langPrefixes objectAtIndex:[userLanguage intValue]];
     
     // Color of wikipedia header, use as background for views
     UIColor *backgroundColor = [UIColor colorWithRed:235.0f/255.0f green:236.0f/255.0f blue:240.0f/255.0f alpha:1.0f];
@@ -84,7 +94,8 @@
     // Language picker setup
     [languagePicker setDataSource:self];
     [languagePicker setDelegate:self];
-    
+    languagePicker.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    languagePicker.layer.borderWidth = 1.0f;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -226,8 +237,6 @@
 }
 
 - (IBAction)languageButtonPressed:(id)sender {
-    
-    [self parseLanguagesFromFile];
     
     [languagePicker reloadAllComponents];
     [languagePicker setHidden:false];
