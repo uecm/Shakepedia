@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7466AC881E7EBCB000331639 /* Languages in Resources */ = {isa = PBXBuildFile; fileRef = 7466AC871E7EBCB000331639 /* Languages */; };
+		7466AC8A1E7EBCD800331639 /* Languages in Resources */ = {isa = PBXBuildFile; fileRef = 7466AC891E7EBCD800331639 /* Languages */; };
 		7489E5421E54488600E36DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489E5411E54488600E36DE2 /* main.m */; };
 		7489E5451E54488600E36DE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489E5441E54488600E36DE2 /* AppDelegate.m */; };
 		7489E5481E54488600E36DE2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7489E5471E54488600E36DE2 /* ViewController.m */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7466AC871E7EBCB000331639 /* Languages */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Languages; sourceTree = "<group>"; };
+		7466AC891E7EBCD800331639 /* Languages */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Languages; sourceTree = "<group>"; };
 		7489E53D1E54488600E36DE2 /* RandomShake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomShake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7489E5411E54488600E36DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7489E5431E54488600E36DE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				7489E5401E54488600E36DE2 /* Supporting Files */,
 				74FF62D31E677CB500CFB99E /* WebPage.h */,
 				74FF62D41E677CB500CFB99E /* WebPage.m */,
+				7466AC891E7EBCD800331639 /* Languages */,
 			);
 			path = RandomShake;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 		7489E5401E54488600E36DE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7466AC871E7EBCB000331639 /* Languages */,
 				7489E5411E54488600E36DE2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -149,9 +155,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7466AC8A1E7EBCD800331639 /* Languages in Resources */,
 				74FF62D21E6751A700CFB99E /* wikiLogo.png in Resources */,
 				74FF62D01E67516900CFB99E /* LaunchScreen.storyboard in Resources */,
 				7489E5501E54488600E36DE2 /* Assets.xcassets in Resources */,
+				7466AC881E7EBCB000331639 /* Languages in Resources */,
 				7489E54B1E54488600E36DE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
